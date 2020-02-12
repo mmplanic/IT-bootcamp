@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
@@ -150,4 +151,158 @@ body{
 .alignRight{
     position: relative;
     float: right;
+=======
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+
+#navBar{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #00506a;
+    text-align: center;
+    z-index: 1;
+}
+#navBar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 15px;;
+    height: 100%;
+}
+
+#navBar ul li{
+    float: left;
+    height: 100%;
+}
+
+#navBar ul li a{
+    
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    padding-right: 25px;
+    text-align: center;
+}
+
+#info{
+    padding: 10%;
+    padding-bottom: 5%;
+    display: inline-block;
+    width: 80%;
+    background-color: skyblue;
+
+}
+#infoContainer{
+    width: 25vw;
+}
+#info h1{
+    font-size: 3vw;
+    color: #0c3e67;
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 0px;
+}
+
+#info h3{
+    margin-top: 3%;
+    margin-bottom: 10%;
+}
+
+#info img{
+    width: 20vw;
+}
+
+#projects{
+    width: 100%;
+    display: inline-block;
+    background-color: #acf3ba;
+    text-align: center;
+    padding-top: 3%;
+
+}
+.projectContainer{
+    width: calc(30% - 6px);
+    margin: 10%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    text-align: center;
+    background-color: cadetblue;
+
+    border-width: 2px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 15px;
+}
+
+.projectContainer img{
+    width: 25vw;
+    height: 25vw;
+    object-fit: contain;
+
+
+}
+
+#contact{
+    text-align: center;
+    padding-top: 3%;
+    background-color:  #055151;
+    color:#7ca38b;
+}
+
+#contactForm{
+    display: inline-block;
+    padding-top: 3%;
+    text-align: left;
+    width: 40%;
+}
+#contactForm input{
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 3%;
+    height: 8vh;
+    border-radius: 6px;
+    border: none;
+    padding-left: 10px;
+    background-color: #323332c7;
+}
+#contactForm textarea{
+    font-size: 18px;
+    resize: vertical;
+    height: 25vh;
+    width: 100%;
+    margin-bottom: 6%;
+    border-radius: 6px;
+    border: none;
+    padding-left: 10px;
+    padding-top: 10px;
+    background-color: #323332c7;
+}
+#contactForm button{
+    width: 100%;
+    height: 8vh;
+    margin-bottom: 5%;
+    border-radius: 6px;
+    border: none;
+    font-size: 20px;
+    color: #e7e7e7;
+    background-color: #272b27c7;
+}
+
+
+
+.alignLeft{
+    position: relative;
+    float: left;
+}
+
+.alignRight{
+    position: relative;
+    float: right;
+>>>>>>> 8684678037fc33e3d7d3660537ac531240640994
 }
