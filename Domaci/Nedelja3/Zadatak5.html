@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <title>Pizza orders</title>
+    </head>
+
+    <body>
+        <div id = "mainContainer" >
+            <div id="controlsContainer">
+                <button  onclick="Dodaj()">NARUCI</button><br>
+                <p id="brojac">0</p>
+                <button  onclick="Poruci()">NARUCI ODMAH</button><br>
+                <p id="poruka"></p>
+            </div>
+        </div>
+    </body>
+
+
+    <style>
+        body{
+            text-align: center; 
+            color: aquamarine; 
+            font-size: 30px;
+        }
+        button {
+            width: 150px; 
+            height: 80px;
+            background-color: transparent;
+            border-style: solid;
+            border-radius: 10px;
+            color: turquoise;
+            font-size: 25px;
+            cursor: pointer;
+
+        }
+        #mainContainer {
+            background-image: url('Zadatak5 img.jpg');
+            width: 70%; 
+            height: 100%; 
+            margin: auto; 
+            background-size: cover;
+
+        }
+        #controlsContainer{
+            float: right; 
+            margin-right: 10%;
+            margin-top: 10%;
+            width: 300px;
+            max-width: 300px;
+        }
+
+    </style>
+    <script>
+        var brojac = 0;
+        function Dodaj(){
+            brojac++;
+            document.getElementById("brojac").innerHTML = brojac;
+            document.getElementById("poruka").innerHTML = "";
+        }
+        function getDateFormated(){
+            let datum = new Date();
+            
+            function formatOO(a){
+                if (a < 10){return ("0"+a);}
+                else return a;
+            }
+            
+            return (formatOO(datum.getDay())+"."+formatOO(datum.getMonth()+1)+"."+datum.getFullYear()+" - "+formatOO(datum.getHours())+":"+formatOO(datum.getMinutes()));
+
+            
+        }
+        function Poruci(){
+            let poruka;
+            let color = "turquoise";
+            if (brojac == 0){
+                poruka = "Greska:<br>Broj pica mora biti veci od 0";
+                color = "red";
+            }
+            else{
+                let dateTime = getDateFormated();
+                let picaPadez = ""
+                if(brojac>9 && brojac<=20)
+                {
+                    picaPadez = "pica"
+                }
+                else{
+                    switch(brojac%10){
+                        case 1: picaPadez = "picu";break;
+                        case 2: case 3: case 4: picaPadez = "pice";break;
+                        default: picaPadez = "pica";
+                    }
+                }
+                poruka = `Narucili ste ${brojac} ${picaPadez}, ${dateTime}`;
+                color = "turquoise";
+
+            }
+            document.getElementById("poruka").setAttribute("style",`color: ${color};`);
+            document.getElementById("poruka").innerHTML = poruka;
+            brojac = 0;
+            document.getElementById("brojac").innerHTML = "0";
+            //setTimeout(function(){document.getElementById("poruka").innerHTML = "";}, 1000);
+            
+        }
+
+
+    </script>
+
+</html>
