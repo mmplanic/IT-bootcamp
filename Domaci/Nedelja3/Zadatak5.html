@@ -49,13 +49,19 @@
         }
 
     </style>
+
+
     <script>
-        var brojac = 0;
+        var brojac = 0; //glavni brojac
+
+        // Uvecava brojac, ispisuje ga i prazni polje za poruku
         function Dodaj(){
             brojac++;
             document.getElementById("brojac").innerHTML = brojac;
             document.getElementById("poruka").innerHTML = "";
         }
+
+        //vraca trenutni datum i vreme u formatu "dd.mm.yyyy - hh:mm"
         function getDateFormated(){
             let datum = new Date();
             
@@ -65,19 +71,11 @@
             }
             
             return (formatOO(datum.getDay())+"."+formatOO(datum.getMonth()+1)+"."+datum.getFullYear()+" - "+formatOO(datum.getHours())+":"+formatOO(datum.getMinutes()));
-
-            
         }
-        function Poruci(){
-            let poruka;
-            let color = "turquoise";
-            if (brojac == 0){
-                poruka = "Greska:<br>Broj pica mora biti veci od 0";
-                color = "red";
-            }
-            else{
-                let dateTime = getDateFormated();
-                let picaPadez = ""
+
+        //U zavisnosti od broja menja rec "pica" u pravilan oblik (znam da nije padez :p)
+        function Padez(){
+            let picaPadez = ""
                 if(brojac>9 && brojac<=20)
                 {
                     picaPadez = "pica"
@@ -89,6 +87,23 @@
                         default: picaPadez = "pica";
                     }
                 }
+                return picaPadez;
+        }
+
+        //Ispisuje poruku koliko pica je poruceno, ukoliko je 0 ispisuje gresku. 
+        //Menja boju teksta poruke u zavisnosti da li je greska ili uspresna porudzbina.
+        //Vraca glavni brojac na nulu; 
+        function Poruci(){
+            let poruka;
+            let color = "turquoise";
+            if (brojac == 0){
+                poruka = "Greska:<br>Broj pica mora biti veci od 0";
+                color = "red";
+            }
+            else{
+                let dateTime = getDateFormated();
+                let picaPadez = Padez();
+               
                 poruka = `Narucili ste ${brojac} ${picaPadez}, ${dateTime}`;
                 color = "turquoise";
 
@@ -97,10 +112,8 @@
             document.getElementById("poruka").innerHTML = poruka;
             brojac = 0;
             document.getElementById("brojac").innerHTML = "0";
-            //setTimeout(function(){document.getElementById("poruka").innerHTML = "";}, 1000);
             
         }
-
 
     </script>
 
