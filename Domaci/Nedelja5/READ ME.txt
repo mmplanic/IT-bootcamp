@@ -1,0 +1,6 @@
+
+Ovo su fajlovi koje treba prebaciti u bare project umesto postojecih
+
+Potrebno je instalirati uuid  (npm instal uuid)
+
+Ako ne radi nema veze, verujte mi da je nekada radilo :D
