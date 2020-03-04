@@ -1,0 +1,26 @@
+{
+    "a":{
+        "x":5,
+        "y":"pera",
+        "z":["svasta", "nesto"],
+        "q":{
+            "bla":150,
+            "truc":"nja nja"
+        }
+    },
+    "b":[85,97,898],
+    "c":true,
+    "d":{
+        "juhu":"huhu",
+        "tra":[89,false, "jbg"]
+    },
+    "e":185.35,
+    "f":[158,{
+        "la":"tra la la",
+        "li":"hi hi hi"
+    },"korona"],
+    "g":"ha ha",
+    "h":"prso sam",
+    "i":"idi begaj",
+    "j":56
+}
