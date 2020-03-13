@@ -1,0 +1,1 @@
+Obrisati sve fajlove iz "src" foldera u react projektu i ubaciti ove fajlove umesto njih :)
