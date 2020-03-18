@@ -1,0 +1,135 @@
+body{
+    background-color: rgb(51, 74, 83);
+    color: lightblue
+}
+
+#name, #number, input[type=submit]{
+    border: 2px solid lightseagreen;
+    background-color: rgb(255, 255, 255, 0.05);
+    border-radius:7px;
+    font-size: 30px;
+    padding: 5px;
+    text-align: center;
+    margin: 20px;
+    color: lightblue;
+    
+
+}
+
+input::placeholder{
+    color: rgb(71, 109, 68);
+    font-size: 23px;
+}
+
+input[type=submit]{
+    cursor: pointer;
+    color: lightseagreen;
+    font-size: 25px;
+    background-color: transparent;
+    
+}
+
+input[type=submit]:hover{
+    background-color: rgb(77, 109, 122);    
+}
+input:focus{
+    outline: none;
+}
+
+
+#input-form{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 40vw;
+    max-width: 40vw;;
+    margin-bottom: 30px;
+}
+
+.name{
+    font-size: 25px;
+    font-weight: 500;
+}
+.number{
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.contact{
+    
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 10px;;
+    padding: 12px 50px 12px 50px ;
+    
+    margin-bottom: 10px;
+    width: 70vw;
+
+    transition: all .2s ease-in-out;
+}
+.contact:hover{
+
+
+    transform: scale(1.1);
+}
+
+#contact-list{
+    
+
+}
+
+#list-container{
+    width: 95vw;
+    height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+}
+
+#imenik{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#dialog-box{
+    position: fixed;
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(0,0,0,0.5);
+    align-items: center;
+    font-size: 25px;
+
+}
+
+#dialog-box input{
+   margin: 20px;
+   width: 30vw;
+
+   border: 2px solid lightseagreen;
+   background-color: rgb(255, 255, 255, 0.05);
+   border-radius:7px;
+   padding: 5px;
+   /* text-align: center; */
+   cursor: pointer;
+   color: lightseagreen;
+   font-size: 25px;
+   background-color: transparent;
+}
+
+#dialog-box input:hover{
+    background-color: rgb(77, 109, 122);    
+}
+.show{
+    display: flex;
+}
+.hide{
+    display: none;
+}
