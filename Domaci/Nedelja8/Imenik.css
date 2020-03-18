@@ -83,7 +83,7 @@ input:focus{
     width: 95vw;
     height: 55vh;
     display: flex;
-    align-items: center;
+    padding-top: 10px;
     justify-content: center;
     overflow-y: scroll;
 }
