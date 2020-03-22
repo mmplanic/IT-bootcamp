@@ -1,0 +1,144 @@
+
+*:focus {
+    outline: none;
+}
+body{
+    background-color: #06041e;
+}
+header{
+    padding: 0;
+    background-image: radial-gradient(#165582, transparent);
+    height: 20vh;
+    max-height: 20vh;
+}
+h1{
+    margin-top: 0px;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 50px;
+}
+h1 span{
+    font-size: 30px;
+}
+.filter{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(26, 26, 65);
+    height: 6vh;
+    max-height: 6vh;
+    padding: 10px;
+}
+
+.filter label{
+    color: lightblue;
+    font-size: 25px;
+}
+.filter select, button{
+    background-color: rgb(26, 26, 65);
+    color: lightblue;
+    font-size: 23px;
+    border: 1px solid lightblue;
+    border-radius: 4px;
+    margin-left: 5px;
+    padding: 3px;
+    cursor: pointer;
+    
+}
+.filter button{
+    font-size: 20px;
+    padding: 5px;
+    
+}
+.filter select:hover, button:hover{
+    background-color: #0d71b9;
+}
+.list-cont{
+    height: 67vh;
+    max-height: 67vh;
+    overflow-y: scroll;
+}
+.list{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    align-items: center;
+
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: url('./img/card.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 20px 35px;
+    padding: 40px;
+    color: white;
+}
+.card h3{
+    
+    display: inline-block;
+    line-height: 26px;
+    max-height: 80px;
+    height: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    width: 80%;
+    color: greenyellow;
+    font-weight: 600;
+    font-size: 20px;
+}
+.card h3:hover{
+    color: lightseagreen;
+}
+.autor-label{
+    margin-bottom: 10px;
+}
+.autor{
+    margin-top: 0;
+    font-size: 20px;
+    color: orange;
+    font-weight: 600;
+}
+.star{
+    display: flex;
+    justify-content: center;
+    background-image: url('./img/star.png');
+    background-size: cover;;
+    width: 80px;
+    height:75px;
+    align-items: center;
+    vertical-align:middle;
+    color: orangered;
+    font-weight: 600;
+    font-size: 18px;
+}
+.star p{
+    margin: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(57, 84, 175); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(23, 23, 66); 
+  }
