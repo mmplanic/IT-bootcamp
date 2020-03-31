@@ -3,7 +3,7 @@ import getAllHeroes from '../../services/heroes.api.services';
 import SearchFilterBar from './components/SearchFilterBar';
 import CardList from './components/CardList';
 import {checkOption} from '../../utils/utils';
-import HeroProfile from './hero.profile';
+//import HeroProfile from './hero.profile';
 
 
 let allHeroes = [];
@@ -115,7 +115,7 @@ export default function Home(){
 
     return(<>
         <SearchFilterBar changeFilterParam={changeFilterParam} filterOptions = {filterOptions}/>
-        {shownHeroes[2]?(<HeroProfile hero={shownHeroes[2]}/>):null}
+        {/* {shownHeroes[2]?(<HeroProfile hero={shownHeroes[2]}/>):null} */}
         <CardList heroes = {shownHeroes} />
         
         </>

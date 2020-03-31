@@ -1,7 +1,12 @@
 import React from 'react'
 import './HeroProfile.css'
+import { Redirect } from 'react-router-dom';
 
-export default function HeroProfile({hero}){
+export default function HeroProfile(props){
+    console.log(props);
+    
+    const {hero} = props.location;
+    if (!hero){return (<Redirect to="/home"/>)}
 
     const {name, powerstats,appearance,biography,work,connections,images} = hero;
 

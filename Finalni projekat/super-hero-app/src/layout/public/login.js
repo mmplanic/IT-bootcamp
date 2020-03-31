@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function RegisterForm(){
+export default function LoginForm(){
     let username = "";
     let password = "";
 

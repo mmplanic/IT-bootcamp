@@ -1,5 +1,7 @@
 import React from 'react'
 import {checkOption} from '../../../utils/utils';
+import { Link } from 'react-router-dom';
+
 
 export default function Card({hero}){
 
@@ -14,6 +16,12 @@ export default function Card({hero}){
             <label>{checkOption(appearance.gender)}</label>
             <label>{checkOption(biography.alignment)}</label>
             <label>{checkOption(biography.publisher)}</label>
+
+            <Link to={{
+                pathname:"/heroprofile",
+                hero:hero
+            }}>Preview</Link>
+
 
         </div>
     )
