@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import getAllHeroes from '../../services/heroes.api.services';
+import {getAllHeroes} from '../../services/heroes.api.services';
 import SearchFilterBar from './components/SearchFilterBar';
 import CardList from './components/CardList';
 import {checkOption} from '../../utils/utils';

@@ -1,6 +1,7 @@
 import React from 'react'
 import './HeroProfile.css'
 import { Redirect } from 'react-router-dom';
+import { extractHero } from '../../utils/utils';
 
 export default function HeroProfile(props){
     console.log(props);
@@ -8,14 +9,18 @@ export default function HeroProfile(props){
     const {hero} = props.location;
     if (!hero){return (<Redirect to="/home"/>)}
 
-    const {name, powerstats,appearance,biography,work,connections,images} = hero;
+    // const {name, powerstats,appearance,biography,work,connections,images} = hero;
 
-    const {intelligence, strength, speed, durability, power, combat} = powerstats;
-    const {gender, race, height, weight, eyeColor, hairColor} = appearance;
-    const {fullName, alterEgos, aliases, placeOfBirth, firstAppearance, publisher, alignment} = biography;
-    const {occupation, base} = work;
-    const {groupAffiliation, relatives} = connections;
+    // const {intelligence, strength, speed, durability, power, combat} = powerstats;
+    // const {gender, race, height, weight, eyeColor, hairColor} = appearance;
+    // const {fullName, alterEgos, aliases, placeOfBirth, firstAppearance, publisher, alignment} = biography;
+    // const {occupation, base} = work;
+    // const {groupAffiliation, relatives} = connections;
 
+    const {name, images, intelligence,strength,speed,durability,power,combat,gender,race,height,weight:weight,eyeColor,hairColor,fullName,alterEgos,aliases,placeOfBirth,firstAppearance,publisher,alignment,occupation,base,groupAffiliation,relatives}=extractHero(hero);
+
+
+    
 
     return(
         <div className="hero-page">
@@ -43,8 +48,8 @@ export default function HeroProfile(props){
                 <label className="group-title">Appearance:</label>
                 <div className="group-items">
                         
-                        <label>Height: {height[1]}</label>
-                        <label>Weight: {weight[1]}</label>
+                        <label>Height: {height}</label>
+                        <label>Weight: {weight}</label>
                         <label>Hair color: {hairColor}</label>
                         <label>Eye color: {eyeColor}</label>
 

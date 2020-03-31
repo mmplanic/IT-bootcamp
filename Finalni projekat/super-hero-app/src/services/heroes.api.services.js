@@ -8,8 +8,12 @@ import axios from 'axios';
 //     return await axios.get(url+key+"/"+id)
 // }
 
-const url = "https://akabab.github.io/superhero-api/api/all.json";
+const url = "https://akabab.github.io/superhero-api/api/";
 
-export default async function getAllHeroes(){
-    return await axios.get(url);
+export async function getAllHeroes(){
+    return await axios.get(url+"all.json");
+}
+
+export async function getHeroByID(id){
+    return await axios.get(url+'/id/'+id+'.json');
 }

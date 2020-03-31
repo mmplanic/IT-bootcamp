@@ -7,18 +7,16 @@ export function isLogedIn(){
     return logedIn;
 }
 
-export async function Register({data}){
+export function setLogedIn(status){
+    logedIn = status;
+}
+
+export async function Register(data){
     return await axios.put(url, data);
 }
 
-export async function LogIn({data}){
-    return await axios.post(url, data).then((res)=>{
-        if(res.success){
-            logedIn = true;
-        }
-        return res;
-    
-    });
+export async function LogIn(data){
+    return await axios.post(url, data);
 }
 
 export function LogOut(){
