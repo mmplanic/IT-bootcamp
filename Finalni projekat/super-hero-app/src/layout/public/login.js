@@ -1,9 +1,15 @@
-import React from 'react'
-import {LogIn} from '../../services/auth.service'
+import React,{useState} from 'react'
+import {LogIn,setLogedIn} from '../../services/auth.service'
+import {useHistory} from 'react-router-dom'
+import './LogRegForms.css'
+
+let username = "";
+let password = "";
 
 export default function LoginForm(){
-    let username = "";
-    let password = "";
+    const [message, setMessage] = useState("");
+    let history = useHistory();
+
 
     const setParam = (e)=>{
         switch (e.target.name){
@@ -14,13 +20,26 @@ export default function LoginForm(){
 
     const LogInUser = (e)=>{
         e.preventDefault();
-        LogIn({username,password}).then((res)=>console.log(res)).catch((err)=>{console.log(err.response.data.message)});
+        LogIn({username,password}).then((res)=>{
+            if(res.data.success){
+                setLogedIn(true);
+                history.push('home');
+            }
+            else setMessage("Failed. Try again later or contact support.");
+        }).catch((err)=>{setMessage(err.response.data.message)});
      
     }
 
-    return (<form onSubmit={LogInUser}>
-        <input type = "text" placeholder="Username" name="Username" required = {true} onInput={setParam}/>
-        <input type = "password" placeholder="password" name="password" minLength="8" required = {true} onInput={setParam}/>
-        <input type = "submit" value="Log in"/>
-    </form>)
+    return (<>
+    <div className="nav-bar form-title">LOGIN</div>
+    <div className = "log-reg-wrapper">
+                <form className="log-reg-form" onSubmit={LogInUser}>
+                    <input type = "text" placeholder="username" name="Username" required = {true} onInput={setParam}/>
+                    <input type = "password" placeholder="password" name="password" minLength="8" required = {true} onInput={setParam}/>
+                    <input type = "submit" value="Log in"/>
+                    <label>{message}</label>
+                </form>
+            </div>
+            </>
+    )
 }

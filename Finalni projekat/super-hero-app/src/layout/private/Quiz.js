@@ -90,6 +90,7 @@ export default function Quiz(){
 
     return(<div className="quiz">
         <NavBar/>
+        <div className="nav-bar form-title">QUIZ</div>
         <button onClick={startQuiz}>START</button>
         <form onSubmit={Guess}>
             <input type="text" onInput={setName}/>

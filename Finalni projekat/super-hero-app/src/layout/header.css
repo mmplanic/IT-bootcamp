@@ -18,8 +18,32 @@
     margin-top: 10px;
 }
 
+.log-out{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    border: 3px solid yellow;
+    padding: 3px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: yellow;
+    cursor: pointer;
+}
+
+.log-out:hover{
+    border-color: white;
+    color: white;
+}
+
 @media (max-width:800px){
     .main-header{
         height: 10vh;
+    }
+    .log-out{
+        font-size: 10px;
+        font-weight: 600;
+        border-width: 2px;
+
+        width: 20px;
     }
 }

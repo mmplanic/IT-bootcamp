@@ -1,13 +1,19 @@
-import React from 'react'
-import {Register} from '../../services/auth.service'
+import React, {useState} from 'react'
+import {Register, setLogedIn} from '../../services/auth.service'
+import {useHistory} from 'react-router-dom'
+import './LogRegForms.css'
 
+let name = "";
+let surname = "";
+let username = "";
+let email = "";
+let password = "";
 
 export default function RegisterForm(){
-    let name = "";
-    let surname = "";
-    let username = "";
-    let email = "";
-    let password = "";
+    const [message, setMessage] = useState("")
+    let history = useHistory();
+
+
 
     const setParam = (e)=>{
         switch (e.target.name){
@@ -21,18 +27,34 @@ export default function RegisterForm(){
 
     const RegisterNewAccount = (e)=>{
         e.preventDefault();
-        Register({name, surname, username, password, email}).then(res=>console.log(res));
+        Register({name, surname, username, password, email}).then(res=>{
+            if(res.data.success){
+                setLogedIn(true);
+                history.push('home');
+            }
+            else{
+                setMessage("Failed. Try again later or contact support.");
+            }
+            
+        });
                 
         
     }
 
-    return (<form onSubmit={RegisterNewAccount}>
-        <input type = "text" placeholder="Name" name="Name" required = {true} onInput={setParam}/>
-        <input type = "text" placeholder="Surname" name="Lastname" required = {true} onInput={setParam}/>
-        <input type = "text" placeholder="Username" name="Username" required = {true} onInput={setParam}/>
-        <input type = "text" placeholder="e-mail" name="email" required = {true} onInput={setParam} pattern="[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}"/>
-        <input type = "password" placeholder="password" name="password" minLength="8" required = {true} onInput={setParam}/>
-        <input type = "password" placeholder="password" name="re-password" minLength="8" required = {true} onInput={(e)=>{e.target.setCustomValidity(e.target.value !== password?"password must match":"");}}/>
-        <input type = "submit" value="Confirm"/>
-    </form>)
+    return (<>
+    <div className="nav-bar form-title">REGISTER</div>
+    <div className = "log-reg-wrapper">
+                <form className="log-reg-form" onSubmit={RegisterNewAccount}>
+                    <input type = "text" placeholder="Name" name="Name" required = {true} onInput={setParam}/>
+                    <input type = "text" placeholder="Surname" name="Lastname" required = {true} onInput={setParam}/>
+                    <input type = "text" placeholder="username" name="Username" required = {true} onInput={setParam}/>
+                    <input type = "text" placeholder="e-mail" name="email" required = {true} onInput={setParam} pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+                    <input type = "password" placeholder="password" name="password" minLength="8" required = {true} onInput={setParam}/>
+                    <input type = "password" placeholder="password" name="re-password" minLength="8" required = {true} onInput={(e)=>{e.target.setCustomValidity(e.target.value !== password?"password must match":"");}}/>
+                    <input type = "submit" value="Confirm"/>
+                    <label>{message}</label>
+                </form>
+            </div>
+            </>
+    )
 }

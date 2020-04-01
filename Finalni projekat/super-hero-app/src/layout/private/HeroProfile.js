@@ -10,13 +10,6 @@ export default function HeroProfile(props){
     const {hero} = props.location;
     if (!hero){return (<Redirect to="/home"/>)}
 
-    // const {name, powerstats,appearance,biography,work,connections,images} = hero;
-
-    // const {intelligence, strength, speed, durability, power, combat} = powerstats;
-    // const {gender, race, height, weight, eyeColor, hairColor} = appearance;
-    // const {fullName, alterEgos, aliases, placeOfBirth, firstAppearance, publisher, alignment} = biography;
-    // const {occupation, base} = work;
-    // const {groupAffiliation, relatives} = connections;
 
     const {name, images, intelligence,strength,speed,durability,power,combat,gender,race,height,weight:weight,eyeColor,hairColor,fullName,alterEgos,aliases,placeOfBirth,firstAppearance,publisher,alignment,occupation,base,groupAffiliation,relatives}=extractHero(hero);
 
@@ -26,6 +19,7 @@ export default function HeroProfile(props){
     return(<>
 
 <NavBar/>
+<div className="nav-bar form-title">HERO PROFILE</div>
         <div className="hero-page">
 
             
