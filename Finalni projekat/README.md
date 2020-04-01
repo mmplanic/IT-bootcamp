@@ -6,6 +6,6 @@ aplikacija ce vrsiti pretagu i prikaz heroja prema zadatom imenu ili listu heroj
 
 na odabir heroja bice prikazana stranica sa profilom tog heroja (slika, ime, i mnogi drugi podatci)
 
-moze se vrsiti i komparacija heroja (ko je od izabranih heroja brzi, jaci...)
+sekcija fight ce prikazivati snagu heroja i imace mogucnost simulacije borbe izmedju dva odabrana heroja
 
 na kraju imamo i mali kviz za proveru znanja (koliko dobro poznajete heroje)

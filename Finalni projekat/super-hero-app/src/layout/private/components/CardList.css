@@ -1,30 +1,144 @@
 .card-list{
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
-    background-color: aqua;
-    padding: 50px;
+    grid-gap: 30px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-image: url('../../img/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 64vh;
+    max-height: 64vh;
+    overflow-y: scroll;
 }
 .card{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: lemonchiffon;
-    border: 1px solid black;
-    border-radius: 6px;
-    padding: 10px;
+    background-color: yellow;
+    border: 3px solid black;
+    width: 20vw;
+    min-width: 280px;
+    padding: 20px;
+    margin:30px;
+    max-height: 370px;
     
 
+}
+
+.card img{
+    max-height: 50%;
+    border: 4px solid black;
+    box-sizing: border-box;
+}
+.card-info{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 3px solid black;
+    width: 95%;
+}
+.card-info div{
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    letter-spacing: 1.5px;
+    font-size: small;
+}
+.card-info div{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.card-info-labels{
+   width: 40%;
+}
+.card-info-generals{
+    background-color: black;
+    color: whitesmoke;
+    width: 60%;
+    text-overflow: ellipsis;
+    
+}
+.card-info-generals label{
+    font-stretch: wider;
 }
 .card img{
     width: fit-content;
     height: fit-content;
 }
+.card label{
+    margin-top: 7px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 17px;
+    max-height: 19px;
+}
 
+.card label:last-of-type{
 
+    margin-bottom: 7px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+    
+}
+
+.btn-profile{
+    margin-top: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 5px;
+    color: black;
+    text-decoration: none;
+    border: 3px solid black;
+}
+.btn-profile:hover{
+    background-color: white;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: yellow
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: black;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: crimson;
+    
+  }
 
 @media (max-width:900px){
     .card-list{
-        grid-template-columns: repeat(3, 1fr);
+        height: 72vh;
+        max-height: 72vh;
     }
+    .card{
+        min-width: 240px;
+    }
+
+    .card label{
+        font-size: 15px;
+        max-height: 17px;
+    }
+    .card-info div{
+        padding-left: 10px;
+
+    }
+
+    
 }

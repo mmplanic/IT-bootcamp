@@ -2,6 +2,7 @@ import React,{useEffect,useState} from 'react'
 import { generateRandomNum, extractHero, checkOption } from '../../utils/utils'
 import { getAllHeroes, getHeroByID } from '../../services/heroes.api.services';
 import './Quiz.css';
+import NavBar from './components/NavBar';
 
 
 let allHeroesIDs = [];
@@ -88,6 +89,7 @@ export default function Quiz(){
     
 
     return(<div className="quiz">
+        <NavBar/>
         <button onClick={startQuiz}>START</button>
         <form onSubmit={Guess}>
             <input type="text" onInput={setName}/>

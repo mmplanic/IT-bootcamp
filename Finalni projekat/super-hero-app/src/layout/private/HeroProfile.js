@@ -2,6 +2,7 @@ import React from 'react'
 import './HeroProfile.css'
 import { Redirect } from 'react-router-dom';
 import { extractHero } from '../../utils/utils';
+import NavBar from './components/NavBar';
 
 export default function HeroProfile(props){
     console.log(props);
@@ -22,8 +23,13 @@ export default function HeroProfile(props){
 
     
 
-    return(
+    return(<>
+
+<NavBar/>
         <div className="hero-page">
+
+            
+
             <img src={images.md} alt="no image"></img>
             <div className="generals">
                 <label className="name">Name: {name}</label>
@@ -91,5 +97,7 @@ export default function HeroProfile(props){
 
 
         </div>
+        
+        </>
     )
 }

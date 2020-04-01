@@ -1,0 +1,8 @@
+.loading{
+    text-align: center;
+    font-family: HotGrill;
+    font-size: 10vw;
+    -webkit-text-stroke: 3px black;
+    color: yellow;
+    background-color: wheat;
+  }

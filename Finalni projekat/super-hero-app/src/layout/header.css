@@ -1,0 +1,25 @@
+.main-header{
+    background-image: url('./img/header.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 18vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-title{
+    background-image: url('./img/SUPERHEROES\ WORLD.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 60vw;
+    height: 15vh;
+    margin-top: 10px;
+}
+
+@media (max-width:800px){
+    .main-header{
+        height: 10vh;
+    }
+}

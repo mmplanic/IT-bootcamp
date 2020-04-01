@@ -3,7 +3,8 @@ import {getAllHeroes} from '../../services/heroes.api.services';
 import SearchFilterBar from './components/SearchFilterBar';
 import CardList from './components/CardList';
 import {checkOption} from '../../utils/utils';
-//import HeroProfile from './hero.profile';
+import NavBar from './components/NavBar';
+import Loading from './components/loading';
 
 
 let allHeroes = [];
@@ -18,6 +19,8 @@ export default function Home(){
     const [shownHeroes, setShownHeroes] = useState([]);
     const [filterOptions, setFilterOptions] = useState({race:["all"],gender:["all"],alignment:["all"],publisher:["all"]});
 
+    const [loading, setLoading] = useState("Loading...");
+
     
 
 
@@ -26,7 +29,7 @@ export default function Home(){
 
     useEffect(()=>{
         getAllHeroes().then((res)=>{  
-            
+            setLoading("");
             allHeroes = res.data;
             setShownHeroes(getHerosToShow());
             setFilterOptions(getFilterOptions()); 
@@ -114,9 +117,10 @@ export default function Home(){
 
 
     return(<>
+        <NavBar/>
         <SearchFilterBar changeFilterParam={changeFilterParam} filterOptions = {filterOptions}/>
-        {/* {shownHeroes[2]?(<HeroProfile hero={shownHeroes[2]}/>):null} */}
-        <CardList heroes = {shownHeroes} />
+        <Loading loading={loading}/>
+        <CardList heroes = {shownHeroes} ></CardList>
         
         </>
 

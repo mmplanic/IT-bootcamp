@@ -1,0 +1,28 @@
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-family: ExtraSalesBlank;
+    height: 7vh;
+    border: 6px solid yellow;
+    border-bottom: none;
+    background-color: black;
+    box-sizing: border-box;
+    /* width: 100%; */
+}
+
+
+.nav-bar label{
+    cursor: pointer;
+    color: white;
+    margin: 5px 0px 5px 0px;
+}
+
+.nav-bar label:hover{
+    cursor: pointer;
+    color: yellow;
+}
+.active-link label{
+    color: tomato;
+}

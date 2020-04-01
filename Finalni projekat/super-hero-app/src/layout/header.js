@@ -1,7 +1,10 @@
 import React from 'react'
+import './header.css'
 
 export default function Header(){
-    return(<div>
-        <h1>Ovo je heder</h1>
-        </div>)
+    return(
+            <header className="main-header">
+                <div className="header-title"/>
+            </header>
+        )
 }
