@@ -1,0 +1,66 @@
+.welcome{
+    display: flex;
+    text-align: center;
+    background-image: url('../img/background.png');
+    height: 82vh;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+}
+.welcome-card{
+    border: 6px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    background-color: yellow;
+}
+
+.welcome h1{
+    margin-top: 0px;
+    padding-top: 5vh;
+    font-family: HotGrill;
+    -webkit-text-stroke: 3px black;
+    color: yellow;
+    font-size: 50px;
+    
+    
+}
+.welcome h2{
+    font-family: HotGrill;
+    -webkit-text-stroke: 3px black;
+    color: yellow;
+    font-size: 40px;
+    transform: rotate(3deg);
+}
+.welcome h3{
+    font-family: HotGrill;
+}
+
+.btn-link{
+    border: 3px solid black;
+    padding: 10px;
+    width: 60%;
+    margin: 20px;
+    text-decoration: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+}
+.btn-link:hover{
+    background-color: white;
+}
+
+@media (max-width:800px){
+    .welcome h1{
+        font-size: 30;
+    }
+    .welcome h2{
+        display: none;
+    }
+    .welcome h3{
+        display: none;
+    }
+
+}

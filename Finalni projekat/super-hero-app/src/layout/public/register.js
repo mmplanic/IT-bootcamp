@@ -21,7 +21,8 @@ export default function RegisterForm(){
             case "Lastname": surname = e.target.value; break;
             case "Username": username = e.target.value; break;
             case "email": email = e.target.value; break;
-            case "password": password = e.target.value;
+            case "password": password = e.target.value; break;
+            default:;
         }
     }
 

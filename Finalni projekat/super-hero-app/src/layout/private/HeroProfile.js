@@ -11,7 +11,7 @@ export default function HeroProfile(props){
     if (!hero){return (<Redirect to="/home"/>)}
 
 
-    const {name, images, intelligence,strength,speed,durability,power,combat,gender,race,height,weight:weight,eyeColor,hairColor,fullName,alterEgos,aliases,placeOfBirth,firstAppearance,publisher,alignment,occupation,base,groupAffiliation,relatives}=extractHero(hero);
+    const {name, images, intelligence,strength,speed,durability,power,combat,gender,race,height,weight,eyeColor,hairColor,fullName,alterEgos,aliases,placeOfBirth,firstAppearance,publisher,alignment,occupation,base,groupAffiliation,relatives}=extractHero(hero);
    
 
     const Generals=[
@@ -70,7 +70,7 @@ export default function HeroProfile(props){
 
 
             <div className="group-gen">
-                <img src={images.md} alt="no image"></img>
+                <img src={images.md} alt="error"></img>
                 
                 <ProfileGroup title="GENERALS" items={Generals}/>
 

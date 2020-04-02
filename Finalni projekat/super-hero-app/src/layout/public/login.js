@@ -14,7 +14,8 @@ export default function LoginForm(){
     const setParam = (e)=>{
         switch (e.target.name){
             case "Username": username = e.target.value; break;
-            case "password": password = e.target.value;
+            case "password": password = e.target.value; break;
+            default:;
         }
     }
 

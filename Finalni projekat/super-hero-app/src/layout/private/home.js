@@ -109,7 +109,8 @@ export default function Home(){
             case "race": race = e.target.value; break;
             case "gender": gender = e.target.value; break;
             case "alignment": alignment = e.target.value; break;
-            case "publisher": publisher = e.target.value;
+            case "publisher": publisher = e.target.value; break;
+            default:;
         }
         setShownHeroes(getHerosToShow());
     }

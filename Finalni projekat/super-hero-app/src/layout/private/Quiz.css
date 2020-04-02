@@ -1,3 +1,49 @@
+.quiz{
+
+}
+
+
 .hints{
     border: 1px solid black;
+    height: 40vh;
+    width: 40vw;
+    overflow-y: scroll;
 }
+.hints label{
+    width: 50%;
+    box-sizing: border-box;
+    display: inline-block;
+    padding-left: 10px;
+    float: right;
+
+}
+.suggests{
+    border: 1px solid black;
+    height: 40vh;
+    width: 40vw;
+    overflow-y: scroll;
+    float: left;
+}
+
+.quiz input[type=text]{
+
+    font-size: 2vw;
+    background-color: black;
+    color:white;
+    font-family: HotGrill;
+    border: 4px solid yellow;
+    border-bottom: none;
+    text-align: center;
+    width: 25vw;
+    min-width: 20px;
+    height: 70%;
+    margin-top: 25px;
+}
+
+.quiz input::placeholder {
+    color:yellow;
+    font-family: HotGrill;
+    font-size: 2vw;
+    text-align: center;
+  }
+    
