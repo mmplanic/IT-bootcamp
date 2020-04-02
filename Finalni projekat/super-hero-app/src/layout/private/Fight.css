@@ -1,0 +1,16 @@
+.fight{
+    background-image: url('../img/fightDesign.png');
+    background-size: contain;
+    background-position: top;
+    height: 70vh;
+    
+}
+
+.info{
+    margin: 0;
+    text-align: center;
+    font-family: HotGrill;
+    font-size: 10vw;
+    -webkit-text-stroke: 3px black;
+    color: white;
+}

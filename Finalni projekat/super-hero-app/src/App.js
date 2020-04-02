@@ -11,6 +11,7 @@ import About from './layout/public/About';
 import HeroProfile from './layout/private/HeroProfile';
 import {isLogedIn} from './services/auth.service';
 import Quiz from './layout/private/Quiz';
+import Fight from './layout/private/Fight';
 
 function App() {
   return (<>
@@ -21,6 +22,7 @@ function App() {
                     <PrivateRoute component={About} path="/about"/>
                     <PrivateRoute component={HeroProfile} path="/heroprofile"/>
                     <PrivateRoute component={Quiz} path="/quiz"/>
+                    <PrivateRoute component={Fight} path="/fight"/>
                     <PublicRoute component={Welcome} path="/welcome"/>
                     <PublicRoute component={LoginForm} path="/login"/>
                     <PublicRoute component={RegisterForm} path="/register"/>

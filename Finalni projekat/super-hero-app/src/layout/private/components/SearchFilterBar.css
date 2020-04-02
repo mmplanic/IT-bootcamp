@@ -6,9 +6,9 @@
     height: 11vh;
     max-height: 11vh;
     border: 2px solid yellow;
+    border-bottom: none;
     overflow: visible;
     box-sizing: border-box;
-
 }
 
 .filter-group{
@@ -22,11 +22,9 @@
     background-color: black;
     color:white;
     font-family: HotGrill;
-
     border: 6px solid yellow;
     border-bottom: none;
     text-align: center;
-    /* padding: 10px; */
     width: 25vw;
     min-width: 20px;
     height: 70%;
@@ -38,10 +36,6 @@
     font-family: HotGrill;
     font-size: 2.5vw;
     text-align: center;
-  }
-
-  .search-bar input:focus{
-      outline: none;
   }
     
 
@@ -93,17 +87,14 @@
         flex-direction: column;
     }
     .select-cloud{
-    
         z-index: 100;
         display: flex;
         justify-content: center;
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
-        /* width: 22vw; */
         min-width: 30vw;
         min-height: 40px;
-        /* margin-top: 25px; */
     }
     .search-bar select{
         font-size: 3vw;
@@ -115,6 +106,4 @@
         font-size: 4vw;
     }
 
-    
-    
 }

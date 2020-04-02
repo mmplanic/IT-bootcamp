@@ -3,91 +3,86 @@ import './HeroProfile.css'
 import { Redirect } from 'react-router-dom';
 import { extractHero } from '../../utils/utils';
 import NavBar from './components/NavBar';
+import ProfileGroup from './components/ProfileGroup';
 
 export default function HeroProfile(props){
-    console.log(props);
     
     const {hero} = props.location;
     if (!hero){return (<Redirect to="/home"/>)}
 
 
     const {name, images, intelligence,strength,speed,durability,power,combat,gender,race,height,weight:weight,eyeColor,hairColor,fullName,alterEgos,aliases,placeOfBirth,firstAppearance,publisher,alignment,occupation,base,groupAffiliation,relatives}=extractHero(hero);
+   
 
+    const Generals=[
+        {prop:"Name:", value:name},
+        {prop: "Gender:", value: gender},
+        {prop: "Race:", value: race},
+        {prop: "Alignment:", value: alignment},
+        {prop: "Publisher:", value: publisher}
+    ]
+   
+    const Powers=[
+        {prop:"Intelligence:", value:intelligence},
+        {prop: "Strength:", value: strength},
+        {prop: "Speed:", value: speed},
+        {prop: "Durability:", value: durability},
+        {prop: "Power:", value: power},
+        {prop: "Combat:", value: combat}
+    ]
+
+    const Appearance=[
+        {prop: "Height:", value: height},
+        {prop: "Weight:", value: weight},
+        {prop: "Hair color:", value: hairColor},
+        {prop: "Eye color:", value: eyeColor}
+    ]
+    const Biography=[
+        {prop: "Full name:", value: fullName},
+        {prop: "Alter Egos:", value: alterEgos},
+        {prop: "Aliases:", value: aliases},
+        {prop: "Place of Birth:", value: placeOfBirth},
+        {prop: "First appearance:", value: firstAppearance}
+    ]
+    const Work=[
+        {prop: "Occupation:", value: occupation},
+        {prop: "Base:", value: base}
+    ]
+    const Connections=[
+        {prop: "Group affiliation:", value: groupAffiliation},
+        {prop: "Relatives:", value: relatives}
+    ]
 
     
 
     return(<>
 
-<NavBar/>
-<div className="nav-bar form-title">HERO PROFILE</div>
+        <NavBar/>
+        <div className="nav-bar form-title">HERO PROFILE</div>
+
+
         <div className="hero-page">
 
-            
-
-            <img src={images.md} alt="no image"></img>
-            <div className="generals">
-                <label className="name">Name: {name}</label>
-                <label className="gender">Gender: {gender}</label>
-                <label className="race">Race: {race}</label>
-                <label className="alignment"> alignment: {alignment}</label>
-                <label className="publisher">Publisher: {publisher}</label>
-            </div>
-            <div className="group">
-                <label className="group-title">Powers:</label>
-                    <div className="group-items">
-                        <label>Intelligence: {intelligence}</label>
-                        <label>Strength: {strength}</label>
-                        <label>Speed: {speed}</label>
-                        <label>Durability: {durability}</label>
-                        <label>Power: {power}</label>
-                        <label>Combat{combat}</label>
-                    </div>
+            <div className="left-col col">
+                <ProfileGroup title="Powers:" items={Powers}/>
+                <ProfileGroup title="Appearance:" items={Appearance}/>
             </div>
 
-            <div className="group">
-                <label className="group-title">Appearance:</label>
-                <div className="group-items">
-                        
-                        <label>Height: {height}</label>
-                        <label>Weight: {weight}</label>
-                        <label>Hair color: {hairColor}</label>
-                        <label>Eye color: {eyeColor}</label>
 
-                    </div>
+            <div className="group-gen">
+                <img src={images.md} alt="no image"></img>
+                
+                <ProfileGroup title="GENERALS" items={Generals}/>
+
             </div>
 
-            <div className="group">
-                <label className="group-title">Biography:</label>
-                <div className="group-items">
-                        
-                        <label>Full name: {fullName}</label>
-                        <label>Alter Egos: {alterEgos}</label>
-                        <label>Aliases: {aliases}</label>
-                        <label>Place of Birth: {placeOfBirth}</label>
-                        <label>First appearance: {firstAppearance}</label>
 
-                    </div>
+            <div className ="right-col col">
+                <ProfileGroup title="Work:" items={Work}/>
+                <ProfileGroup title="Biography:" items={Biography}/>
+                <ProfileGroup title="Connections:" items={Connections}/>
             </div>
 
-            <div className="group">
-                <label className="group-title">Work:</label>
-                <div className="group-items">
-                        
-                        <label>Occupation: {occupation}</label>
-                        <label>Base: {base}</label>
-
-                    </div>
-            </div>
-
-            <div className="group">
-                <label className="group-title">Connections:</label>
-                <div className="group-items">
-                        
-                        <label>Group affiliation: {groupAffiliation}</label>
-                        <label>Relatives: {relatives}</label>
-
-                    </div>
-            </div>
 
 
         </div>
