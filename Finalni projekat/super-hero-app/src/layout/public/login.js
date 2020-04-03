@@ -1,14 +1,16 @@
 import React,{useState} from 'react'
-import {LogIn,setLogedIn} from '../../services/auth.service'
-import {useHistory} from 'react-router-dom'
+import {LogIn,setLogedIn, isLogedIn} from '../../services/auth.service'
+import {useHistory, Redirect} from 'react-router-dom'
 import './LogRegForms.css'
 
 let username = "";
 let password = "";
 
 export default function LoginForm(){
+    
     const [message, setMessage] = useState("");
     let history = useHistory();
+    if (isLogedIn()){return (<Redirect to="/home"/>)};
 
 
     const setParam = (e)=>{

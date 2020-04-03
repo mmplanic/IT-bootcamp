@@ -39,7 +39,6 @@ export default function Quiz(){
             randomizeAgain = checkAttributes().length<9;
         }
         attributes = checkAttributes();
-        console.log(attributes);
         Game();
     }
 
@@ -65,7 +64,6 @@ export default function Quiz(){
     
     const Game = ()=>{
         let counter = 0;
-        console.log(attributes);
         console.log(heroName);
         onTick();
         
@@ -80,7 +78,7 @@ export default function Quiz(){
     const setName=(e)=>{
         tryName = e.target.value;
         setSuggests(Names.filter((name)=>{
-            return name.toLowerCase().includes(tryName.toLowerCase())
+            return name.toLowerCase().startsWith(tryName.toLowerCase())
         }))
     }
 
