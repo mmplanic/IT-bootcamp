@@ -1,5 +1,5 @@
 {
-  "homepage": "https://github.com/mmplanic/IT-bootcamp/tree/master/Finalni%20projekat/super-hero-app",
+  "homepage": "https://mmplanic.github.io//IT-bootcamp/Finalni%20projekat/super-hero-app",
   "name": "super-hero-app",
   "version": "0.1.0",
   "private": true,
@@ -15,6 +15,7 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1"
   },
+  
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
