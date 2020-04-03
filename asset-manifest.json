@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "//IT-bootcamp/Finalni%20projekat/super-hero-app/static/css/main.ffa50b6a.chunk.css",
-    "main.js": "//IT-bootcamp/Finalni%20projekat/super-hero-app/static/js/main.2f6071dc.chunk.js",
-    "main.js.map": "//IT-bootcamp/Finalni%20projekat/super-hero-app/static/js/main.2f6071dc.chunk.js.map",
-    "runtime-main.js": "//IT-bootcamp/Finalni%20projekat/super-hero-app/static/js/runtime-main.99531bca.js",
-    "runtime-main.js.map": "//IT-bootcamp/Finalni%20projekat/super-hero-app/static/js/runtime-main.99531bca.js.map",
-    "static/js/2.425a7ae2.chunk.js": "//IT-bootcamp/Finalni%20projekat/super-hero-app/static/js/2.425a7ae2.chunk.js",
-    "static/js/2.425a7ae2.chunk.js.map": "//IT-bootcamp/Finalni%20projekat/super-hero-app/static/js/2.425a7ae2.chunk.js.map",
-    "index.html": "//IT-bootcamp/Finalni%20projekat/super-hero-app/index.html",
-    "precache-manifest.b1b70757e4b2a1bdaf3ee9f8cbdb1f1f.js": "//IT-bootcamp/Finalni%20projekat/super-hero-app/precache-manifest.b1b70757e4b2a1bdaf3ee9f8cbdb1f1f.js",
-    "service-worker.js": "//IT-bootcamp/Finalni%20projekat/super-hero-app/service-worker.js",
-    "static/css/main.ffa50b6a.chunk.css.map": "//IT-bootcamp/Finalni%20projekat/super-hero-app/static/css/main.ffa50b6a.chunk.css.map",
-    "static/js/2.425a7ae2.chunk.js.LICENSE.txt": "//IT-bootcamp/Finalni%20projekat/super-hero-app/static/js/2.425a7ae2.chunk.js.LICENSE.txt",
-    "static/media/App.css": "//IT-bootcamp/Finalni%20projekat/super-hero-app/static/media/hot-grill-demo.3c1af9e9.ttf",
-    "static/media/header.css": "//IT-bootcamp/Finalni%20projekat/super-hero-app/static/media/header.0765598f.png",
-    "static/media/Welcome.css": "//IT-bootcamp/Finalni%20projekat/super-hero-app/static/media/background.a3216ac4.png",
-    "static/media/Fight.css": "//IT-bootcamp/Finalni%20projekat/super-hero-app/static/media/fightDesign.c4096c07.png",
-    "static/media/SearchFilterBar.css": "//IT-bootcamp/Finalni%20projekat/super-hero-app/static/media/select4.d0170a75.png"
+    "main.css": "/bootcamp-final/static/css/main.71f2284c.chunk.css",
+    "main.js": "/bootcamp-final/static/js/main.2f6071dc.chunk.js",
+    "main.js.map": "/bootcamp-final/static/js/main.2f6071dc.chunk.js.map",
+    "runtime-main.js": "/bootcamp-final/static/js/runtime-main.bf37f301.js",
+    "runtime-main.js.map": "/bootcamp-final/static/js/runtime-main.bf37f301.js.map",
+    "static/js/2.425a7ae2.chunk.js": "/bootcamp-final/static/js/2.425a7ae2.chunk.js",
+    "static/js/2.425a7ae2.chunk.js.map": "/bootcamp-final/static/js/2.425a7ae2.chunk.js.map",
+    "index.html": "/bootcamp-final/index.html",
+    "precache-manifest.e8fe505f32fd54c0b112885d6ae9f52c.js": "/bootcamp-final/precache-manifest.e8fe505f32fd54c0b112885d6ae9f52c.js",
+    "service-worker.js": "/bootcamp-final/service-worker.js",
+    "static/css/main.71f2284c.chunk.css.map": "/bootcamp-final/static/css/main.71f2284c.chunk.css.map",
+    "static/js/2.425a7ae2.chunk.js.LICENSE.txt": "/bootcamp-final/static/js/2.425a7ae2.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/bootcamp-final/static/media/hot-grill-demo.3c1af9e9.ttf",
+    "static/media/header.css": "/bootcamp-final/static/media/header.0765598f.png",
+    "static/media/Welcome.css": "/bootcamp-final/static/media/background.a3216ac4.png",
+    "static/media/Fight.css": "/bootcamp-final/static/media/fightDesign.c4096c07.png",
+    "static/media/SearchFilterBar.css": "/bootcamp-final/static/media/select4.d0170a75.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.99531bca.js",
+    "static/js/runtime-main.bf37f301.js",
     "static/js/2.425a7ae2.chunk.js",
-    "static/css/main.ffa50b6a.chunk.css",
+    "static/css/main.71f2284c.chunk.css",
     "static/js/main.2f6071dc.chunk.js"
   ]
 }
